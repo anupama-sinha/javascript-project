@@ -1,126 +1,118 @@
-<html>
-    <body>
-        <p>Plain HTML here</p>
-        <!--JavaScript code in script. Parameters : lang(Obsolete) & src(Absolute path of js file which takes precedence for rendering)-->
-        <script>
-            //For using old code version working as ES5(2009) changed existing code and introduced new, hence compatibility issue. Now not required as enabled by default
-            'use strict'
-            // alert('JavaScript Here')
-            alert(1+2);
-           //Without semicolon in above alert, below alert will error out
-            [1,2].forEach(alert)
-            //Variable names start with letter or special char($_) and have digits & are case sensitive
-            let name='Anupama',exp=7
-            let nAme='Sinha'
-            alert(name)
-            alert(nAme)
-            //var : No block scope,Can be redeclared but ignored, Obsolete now
-            var varField = 10;
-            //Constants cant be reassigned
-            const nAMe='Javascript'
-            alert(nAMe)
-            //*****************Datatypes in Javascript : Primitive(Type 1-6)
-            //1. Numner
-            let n=1;
-            let m=1.4;
-            //2. BigInt
-            let a=1234567890n;
-            //3.String
-            let s="Anupama"
-            let t=`First Name ${s}`
-            console.log(t);
-            //4.Boolean
-            let istrue=1>2;
-            //5.Null : No type. But typeOf(null):Object ->Known Javascript bug
-            let l= null;
-            //6.Undefined : Unassigned value
-            let age;
-            console.log(age);
-            //7.Object 
-            let Math;
-            let emp = {
-                id: 1,
-                name: 'Anu'
-            }
-            //8.Symbol
-            let id1 = Symbol("id")
-            let id2 = Symbol("id")
-            console.log(id1==id2) //Returns false as same also unique
+<!DOCTYPE html>
 
-            //*******************Datatype Conversions
-            //1. String Conversion
-            //2. Numeric Conversion
-            //3. Boolean Conversion
-            
-            //*******************Interaction Types
-            alert("Alert Interaction Type");
-            let result = prompt("Hi");
-            let newResult = confirm("Are you confirming?");
-            
-            //*******************Conditional Operators
-            let myAge = prompt("How old are you?",' ');
-            if(myAge>18)
-                console.log('You are an Adult!!!')
+<head>
+    <!--For CSS, Icons, Javascript-->
 
-            //********************Function Types
-            //1. Function Declaration
-            function sum1(a,b){
-                return a+b;
-            }
-            //2.Function Expresssion
-            let sum2 = function(a,b){
-                return a+b;
-            }
-            //3.Arrow Function
-            let sum3 = (a,b) => {
-                return a+b;
-            }
-            //4.Callback Functions : Anonymous Function
-            /*ask(
-                "Do u agree?",
-                function() { alert('Thanks');},
-                function() { alert('Ohkay');}
-            )*/ 
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 
-            //*******************Optional Chaining
-            //obj?.prop -> Returns obj.prop if exists, else undefined
-            //obj?.[prop] -> Returns obj[prop] if exists, else undefined
-            //obj.method?.() -> Invokes obj.method() if exists, else undefined
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-            //*******************Arrays
-            let empList = ["Anu","Anupama","Annu"];
-            delete(empList[2]);
-            console.log("Size of Array : ", empList.length);
-            // empList.push(...item);
-            empList.forEach((item,index,array) => {
-                console.log(`Item : ${item} Index : ${index} Array : ${array}`)
-            })
-            
-            let length = empList.map(item => item.length);
-            console.log("Length of empList Array : ",length)
+    <!-- Slim version breaks AJAX Calls-->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script> -->
 
-            let empList2D = [{id:1,name:"AS"},{id:2,name:"ASB"},{id:3,name:"ASM"}];
-            let newLength = empList2D.map(item => item.name.length);
-            console.log("Length of empList2D Array : ",newLength);
-            console.log(empList2D[2].name)
 
-            let empJson = JSON.stringify(empList2D);
-            console.log(empJson);
+    <!--Bootstrap CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
 
-            //Array Destructing
-            let [empId,empName] = [4,"ASM"];
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
-            //Date
-            console.log("Date : ", new Date());
+    <!-- For loading Icons-->
+    <!--Cloudfare for Font Awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
 
-            //Global Object : window(Browser),global(Node.js),globalThis(Others)
-            window.alert("Global Object")
+    <style>
+        <!--Class signified by dot-->
+        .h1-style{
+            background-color: brown;
+        }
 
-            //Polyfills
-            if(!window.Promise)
-                console.log("Old Browser")
+        .scrollable {
+    height: 400px;
+    overflow: auto;
+  }
+</style>
+</head>
 
-            
-       </script>
-    </body>
+<body>
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+        <a class="navbar-brand" href="#">
+            <img src="image/app_icon.png" width="30" height="30" class="d-inline-block align-top" alt="" />
+            <span style="margin-left: 10px;">ShopApp</span>
+        </a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                Search
+            </button>
+        </form>
+    </nav>
+    <hr />
+    </div>
+
+    <div class="container">
+        <div
+            class="row scrollable flex-row flex-nowrap"
+            id="search-results"
+        ></div>
+    </div>
+
+    <template id="search-result-template">
+        <div style="width:200px; margin:20px;">
+          <div class="row">
+            <div class="col-12">
+              <img
+                class="search-img"
+                src="image/book1.jpg"
+                width="200"
+                height="280"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <h6 class="search-name">Java complete reference</h6>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <span>
+                <button
+                  type="button"
+                  class="btn btn-success btn-sm search-rating"
+                >
+                  4.3
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                </button>
+              </span>
+            </div>
+            <div class="col-8 search-review">Reviews (1,234)</div>
+          </div>
+          <div class="row" style="margin-left: 2px; margin-top: 4px;">
+            <h5 class="search-price"><b>$ 590</b></h5>
+          </div>
+        </div>
+      </template>
+
+    <!--Bottom Anchor Tags for other HTMLs-->
+    <h1 style="background-color:blueviolet;">Anupama</h1>
+    <h1 class="h1-style">Sinha</h1>
+    <a href="js-basics.html">Check Javascript Basic Coding</a>
+    <br/>
+    <a href="click-counter.html">Check Counter Page</a>
+    <br/>
+    <a href="contact-us.html">Contact Us</a>
+</body>
+
 </html>

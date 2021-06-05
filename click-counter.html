@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+    <head>
+        <script>
+            function increment(){
+                // alert("Increment function invoked")
+                var currentCount = parseInt(document.getElementById("count").innerHTML);
+                currentCount=currentCount+1;
+                document.getElementById("count").innerHTML=currentCount;
+            }
+        </script>
+
+    </head>
+    <body>
+        <button onclick="increment()">Increase</button>
+        <h2 id="count">0</h2>
+    </body>
+
+</html>

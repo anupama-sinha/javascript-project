@@ -75,5 +75,26 @@ undefined
 * Node.js is Javascript runner(runtime built) on top of V8, built in C++. Server side(Uses Js outside browser), non blocking(Worker threads in background does the job and sends result through Call Back Queue)
 * Vanilla Javascript treated each Request as separate thread. But Node.js used Single Thread to get all Requests and got job done by Node.js
 
+## IIFE(Immediately Invoked Function Expression)
+(function(){
+
+})();
+
+
+
+## Javascript Sample Codes(Standalone runnable)
+* https://github.com/anupama-sinha/javascript-project/blob/master/index.html
+* https://github.com/anupama-sinha/reactjs-redux-project/blob/master/src/components/BasicComponent.html
+
+## Chrome Extensions for Coding
+* ColorPick Eyedropper : Helps in selecting color
+* Cloudflare CDN : Use for Font Awesome Icons(https://cdnjs.com/libraries/font-awesome, https://www.w3schools.com/icons/fontawesome_icons_intro.asp)
+
+## HTML Tags
+* <template> : Tag to hold hidden data when page loads
+* <!DOCTYPE html> : Represents HTML5
+
 ## References
 * [Advanced Javascript 2021 by Andrei Neagoie](https://www.udemy.com/course/advanced-javascript-concepts/)
+* [My React.js Notes](https://github.com/anupama-sinha/anupama-notes/blob/master/react-js.md)
+* https://javascript.info/

@@ -1,0 +1,126 @@
+<html>
+    <body>
+        <p>Plain HTML here</p>
+        <!--JavaScript code in script. Parameters : lang(Obsolete) & src(Absolute path of js file which takes precedence for rendering)-->
+        <script>
+            //For using old code version working as ES5(2009) changed existing code and introduced new, hence compatibility issue. Now not required as enabled by default
+            'use strict'
+            // alert('JavaScript Here')
+            alert(1+2);
+           //Without semicolon in above alert, below alert will error out
+            [1,2].forEach(alert)
+            //Variable names start with letter or special char($_) and have digits & are case sensitive
+            let name='Anupama',exp=7
+            let nAme='Sinha'
+            alert(name)
+            alert(nAme)
+            //var : No block scope,Can be redeclared but ignored, Obsolete now
+            var varField = 10;
+            //Constants cant be reassigned
+            const nAMe='Javascript'
+            alert(nAMe)
+            //*****************Datatypes in Javascript : Primitive(Type 1-6)
+            //1. Number
+            let n=1;
+            let m=1.4;
+            //2. BigInt
+            let a=1234567890n;
+            //3.String
+            let s="Anupama"
+            let t=`First Name ${s}`
+            console.log(t);
+            //4.Boolean
+            let istrue=1>2;
+            //5.Null : No type. But typeOf(null):Object ->Known Javascript bug
+            let l= null;
+            //6.Undefined : Unassigned value
+            let age;
+            console.log(age);
+            //7.Object 
+            let Math;
+            let emp = {
+                id: 1,
+                name: 'Anu'
+            }
+            //8.Symbol
+            let id1 = Symbol("id")
+            let id2 = Symbol("id")
+            console.log(id1==id2) //Returns false as same also unique
+
+            //*******************Datatype Conversions
+            //1. String Conversion
+            //2. Numeric Conversion
+            //3. Boolean Conversion
+            
+            //*******************Interaction Types
+            alert("Alert Interaction Type");
+            let result = prompt("Hi");
+            let newResult = confirm("Are you confirming?");
+            
+            //*******************Conditional Operators
+            let myAge = prompt("How old are you?",' ');
+            if(myAge>18)
+                console.log('You are an Adult!!!')
+
+            //********************Function Types
+            //1. Function Declaration
+            function sum1(a,b){
+                return a+b;
+            }
+            //2.Function Expresssion
+            let sum2 = function(a,b){
+                return a+b;
+            }
+            //3.Arrow Function
+            let sum3 = (a,b) => {
+                return a+b;
+            }
+            //4.Callback Functions : Anonymous Function
+            /*ask(
+                "Do u agree?",
+                function() { alert('Thanks');},
+                function() { alert('Ohkay');}
+            )*/ 
+
+            //*******************Optional Chaining
+            //obj?.prop -> Returns obj.prop if exists, else undefined
+            //obj?.[prop] -> Returns obj[prop] if exists, else undefined
+            //obj.method?.() -> Invokes obj.method() if exists, else undefined
+
+            //*******************Arrays
+            let empList = ["Anu","Anupama","Annu"];
+            delete(empList[2]);
+            console.log("Size of Array : ", empList.length);
+            // empList.push(...item);
+            empList.forEach((item,index,array) => {
+                console.log(`Item : ${item} Index : ${index} Array : ${array}`)
+            })
+            
+            let length = empList.map(item => item.length);
+            console.log("Length of empList Array : ",length)
+
+            let empList2D = [{id:1,name:"AS"},{id:2,name:"ASB"},{id:3,name:"ASM"}];
+            let newLength = empList2D.map(item => item.name.length);
+            console.log("Length of empList2D Array : ",newLength);
+            console.log(empList2D[2].name)
+
+            let empJson = JSON.stringify(empList2D);
+            console.log(empJson);
+
+            //Array Destructing
+            let [empId,empName] = [4,"ASM"];
+
+            //Date
+            console.log("Date : ", new Date());
+
+            //Global Object : window(Browser),global(Node.js),globalThis(Others)
+            window.alert("Global Object")
+
+            //Polyfills
+            if(!window.Promise)
+                console.log("Old Browser")
+
+            
+       </script>
+    </body>
+</html>
