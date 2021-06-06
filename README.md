@@ -93,8 +93,19 @@ undefined
 * template : Tag to hold hidden data when page loads
 * !DOCTYPE html : Represents HTML5
 
+## Bootstrap
+* Library for CSS
+* It divides a row into 12 sections. So, a container can have multiple rows and each row is by default divided equally unless specified otherwise
+
+## Font Awesome Website for Icons
+* Search any icon and start using it and copy the CSS provided. Just a CDN to be included in style for download
+
 ## References
 * [Advanced Javascript 2021 by Andrei Neagoie](https://www.udemy.com/course/advanced-javascript-concepts/)
 * [My React.js Notes](https://github.com/anupama-sinha/anupama-notes/blob/master/react-js.md)
 * [My Standalone HTML, Javascript Sample Code](* https://github.com/anupama-sinha/reactjs-redux-project/blob/master/src/components/BasicComponent.html)
 * https://javascript.info/
+* https://getbootstrap.com/docs/5.0/getting-started/introduction/
+* [Free SVG Icons](https://www.flaticon.com/free-icon/)
+* [Free Font Awesome Website for Icons](https://fontawesome.com/v5.15/icons?m=free)
+* https://github.com/iamvickyav/stud-to-software-developer/blob/master/batch_1/ui-notes/ui-session-notes.md
