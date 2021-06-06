@@ -100,6 +100,16 @@ undefined
 ## Font Awesome Website for Icons
 * Search any icon and start using it and copy the CSS provided. Just a CDN to be included in style for download
 
+## CSS(Cascaded Style Sheets)
+* Precedence : Inline Style > External & Internal > Browser
+* [CSS Font Awesome Icons](https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free)
+
+## Bootstrap(CSS Library)
+* Bootstrap defined classes can be used to have default features
+
+## JQuery
+* In Progress
+
 ## References
 * [Advanced Javascript 2021 by Andrei Neagoie](https://www.udemy.com/course/advanced-javascript-concepts/)
 * [My React.js Notes](https://github.com/anupama-sinha/anupama-notes/blob/master/react-js.md)
@@ -109,3 +119,6 @@ undefined
 * [Free SVG Icons](https://www.flaticon.com/free-icon/)
 * [Free Font Awesome Website for Icons](https://fontawesome.com/v5.15/icons?m=free)
 * https://github.com/iamvickyav/stud-to-software-developer/blob/master/batch_1/ui-notes/ui-session-notes.md
+* https://www.w3schools.com/css/default.asp
+* https://www.w3schools.com/bootstrap4/
+* https://www.w3schools.com/jquery/default.asp
