@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("h1").click(function () {
+                //Hide current element
+                $(this).hide();
+
+                //Hide h2 element tag : Here it wont happen as click on h1 is checked. And once h1 clicked. h2 will also hide
+                $("h2").fadeOut("slow");
+
+                //Hide HTML element with id as 'box1'
+                $("#box1").hide();
+            });
+
+            //Hide HTML element with class name as 'box2'
+            $(".box2").hide();
+
+            //JQuery CallBack : Alert in callback function
+            $("h6").hide("slow",function(){
+                alert("Yes callback successful");
+            })
+
+            //JQuery Method Chaining
+            $("h5").css("color","red").slideUp(2000);
+
+            //DOM Manipulation : Reading & Writing
+            $("#btn1").click(function(){
+                $('#text').val("Anu");
+                alert('DOM Text: ' + $('#btn1').text() + 'DOM HTML: ' + $('#btn1').html() + 'Value' + $("#text").val());
+                $('h1').append("<p>Sinha</p>");
+                //CSS Addition via classes
+                $('h1').addClass("addcolor");
+            });
+
+       });
+    </script>
+    <style>
+        .addcolor{
+            color: blueviolet
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hi, This is a Header1 Tag. It will hide if you click on it</h1>
+    <h2>Header2 Tag. Not going to hide</h2>
+    <h6>Header6 Tag with CallBack</h6>
+    <h5>Header5 Tag with Method Chaining</h5>
+    <button id="btn1"><p>Text</p></button>
+    <input type="text" id="text" value="Anupama Sinha">
+</body>
+
+</html>

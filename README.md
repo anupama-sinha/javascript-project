@@ -108,12 +108,20 @@ undefined
 * Bootstrap defined classes can be used to have default features
 
 ## JQuery
-* In Progress
+* Lightweight Javascript Library
+* Multiple features for any task(HTML/DOM Manipulation, CSS Manipulation, HTML Event Methods, Effects & Animation, AJAX, Utilities, etc)
+* Syntax : $(selector).action() [$: Signifies JQuery, selector: Finds HTML element, action: Action performed on elements, ready event: To wait for full load of document and then initiate action]
+
+## Mock JSON API Creation
+* https://mocki.io/fake-json-api
+
+## Validation of JSON 
+* https://jsonlint.com/
 
 ## References
 * [Advanced Javascript 2021 by Andrei Neagoie](https://www.udemy.com/course/advanced-javascript-concepts/)
 * [My React.js Notes](https://github.com/anupama-sinha/anupama-notes/blob/master/react-js.md)
-* [My Standalone HTML, Javascript Sample Code](* https://github.com/anupama-sinha/reactjs-redux-project/blob/master/src/components/BasicComponent.html)
+* [My Standalone HTML, Javascript Sample Code](https://github.com/anupama-sinha/reactjs-redux-project/blob/master/src/components/BasicComponent.html)
 * https://javascript.info/
 * https://getbootstrap.com/docs/5.0/getting-started/introduction/
 * [Free SVG Icons](https://www.flaticon.com/free-icon/)
